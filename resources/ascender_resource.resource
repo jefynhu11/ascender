@@ -26,4 +26,8 @@ fill in the fields
     Input Text          ${MESSAGE_FIELD}    ${MESSAGE}
 
 click button submit
-    Click Element       ${SEND_BUTTON}
+    Wait Until Keyword Succeeds   3 times    5 sec   Click Button        ${SEND_BUTTON}
+
+check if send with succeed
+    Wait Until Element Is Visible           ${SUCCESS_TEXT}
+    Get Text                                ${SUCCESS_TEXT}
