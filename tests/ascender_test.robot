@@ -5,7 +5,7 @@ Library             SeleniumLibrary
 Library             FakerLibrary        locale=pt_BR
 Resource            ../configs/config.resource
 Resource            ../resources/ascender_resource.resource
-Test Setup          Open Browser        ${URL}          ${BROWSER}
+Test Setup          Open Browser   ${URL}   ${BROWSER}   options=add_argument("--disable-notifications");add_experimental_option("excludeSwitches",["enable-logging"])
 Test Teardown       Close Browser
 
 *** Test Cases ***
@@ -45,7 +45,7 @@ Test case 04 - Click button 'Saiba Mais'
     click menu 'Sabia Mais'
     
 
-Test case 05 - fill in the fields, click send and ckeck with succeed
+Test case 05 - Fill in the fields, click send and ckeck with succeed
     [Documentation]     Test fill in the fields and submit
     [Tags]              fill
 
