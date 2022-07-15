@@ -30,4 +30,5 @@ click button submit
 
 check if send with succeed
     Wait Until Element Is Visible           ${SUCCESS_TEXT}
-    Get Text                                ${SUCCESS_TEXT}
+    ${mensagem_elemento} =                  Get Text          ${SUCCESS_TXT_XP}
+    Should Contain                          ${mensagem_elemento}        Contato enviado com sucesso 😍
