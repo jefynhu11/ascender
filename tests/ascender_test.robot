@@ -45,7 +45,7 @@ Test case 04 - Click button 'Saiba Mais'
     click menu 'Sabia Mais'
     
 
-Test case 04 - fill in the fields
+Test case 05 - fill in the fields, click send and ckeck with succeed
     [Documentation]     Test fill in the fields and submit
     [Tags]              fill
 
@@ -59,3 +59,4 @@ Test case 04 - fill in the fields
     check the page title is "Ascender - Elevando o nível dos sistemas da sua empresa"
     fill in the fields  ${NAME_FAKER}   ${EMAIL_FAKER}  ${CELULAR_FAKER}    ${MENSAGEM_FAKER}
     click button submit
+    check if send with succeed
