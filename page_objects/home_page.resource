@@ -9,6 +9,5 @@ ${NAME_FIELD}           id=name
 ${EMAIL_FIELD}          id=email
 ${PHONE_FIELD}          id=phone
 ${MESSAGE_FIELD}        id=message
-${SUBMIT_BUTTON}        id=//*[@id="contact-form"]/button
 ${SEND_BUTTON}          css=#contact-form > button
 ${SUCCESS_TEXT}         id=success-contact
