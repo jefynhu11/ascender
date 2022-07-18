@@ -11,6 +11,7 @@ Test Teardown       Close Browser
 *** Test Cases ***
 Test case 01 - Click menu 'Quem Somos'
     [Documentation]     Test click for menu 'who we are'
+    [Tags]              menus   quem_somos
 
     Maximize Browser Window
 
@@ -20,6 +21,7 @@ Test case 01 - Click menu 'Quem Somos'
 
 Test case 02 - Click menu 'O que fazemos'
     [Documentation]     Test click for menu 'what we do'
+    [Tags]              menus   o_que_fazemos
 
     Maximize Browser Window
 
@@ -29,6 +31,7 @@ Test case 02 - Click menu 'O que fazemos'
 
 Test case 03 - Click menu 'Trabalhe conosco'
     [Documentation]     Test click for menu 'work with us'
+    [Tags]              menus   trabalhe_consoco
 
     Maximize Browser Window
 
@@ -51,12 +54,12 @@ Test case 05 - Fill in the fields, click send and ckeck with succeed
 
     ${NAME_FAKER}       FakerLibrary.Name
     ${EMAIL_FAKER}      FakerLibrary.Email
-    ${CELULAR_FAKER}    FakerLibrary.Phone Number
-    ${MENSAGEM_FAKER}   FakerLibrary.Text
+    ${MOBILE_FAKER}    FakerLibrary.Phone Number
+    ${MESSAGE_FAKER}   FakerLibrary.Text
 
     Maximize Browser Window
 
     check the page title is "Ascender - Elevando o nível dos sistemas da sua empresa"
-    fill in the fields  ${NAME_FAKER}   ${EMAIL_FAKER}  ${CELULAR_FAKER}    ${MENSAGEM_FAKER}
+    fill in the fields  ${NAME_FAKER}   ${EMAIL_FAKER}  ${MOBILE_FAKER}    ${MESSAGE_FAKER}
     click button submit
     check if send with succeed
