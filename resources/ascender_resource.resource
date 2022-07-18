@@ -7,12 +7,18 @@ check the page title is "${TITLE}"
 
 click menu 'Quem Somos'    
     Click Element       ${QUEM_SOMOS}
+    ${txt_element} =                           Get Text          ${QUEM_SOMOS_TXT}
+    Should Contain      ${txt_element}         Quem Somos
 
 click menu 'O que fazemos'
     Click Element       ${O_QUE_FAZEMOS}
+    ${txt_element} =                           Get Text          ${O_QUE_FAZEMOS_TXT}
+    Should Contain      ${txt_element}         O que fazemos
 
 click menu 'TRABALHE CONOSCO'
     Click Element       ${TRABALHE_CONOSCO}
+    ${txt_element} =                           Get Text          ${TRABALHE_C_TXT}
+    Should Contain      ${txt_element}         Trabalhe Conosco
 
 click menu 'Sabia Mais'
     Click Element       ${SABIA_MAIS}
@@ -30,5 +36,5 @@ click button submit
 
 check if send with succeed
     Wait Until Element Is Visible           ${SUCCESS_TEXT}
-    ${mensagem_elemento} =                  Get Text          ${SUCCESS_TEXT}
-    Should Contain                          ${mensagem_elemento}        Contato enviado com sucesso 😍
+    ${txt_element} =                        Get Text            ${SUCCESS_TEXT}
+    Should Contain                          ${txt_element}      Contato enviado com sucesso 😍
