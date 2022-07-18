@@ -2,6 +2,16 @@
 Resource            ../page_objects/home_page.resource
 
 *** Keywords ***
+open the browser
+    Open Browser    ${URL}  ${BROWSER}   options=add_argument("--disable-notifications");add_experimental_option("excludeSwitches",["enable-logging"])
+    Maximize Browser Window
+
+close the browser
+    Close Browser
+
+access the website
+    Go To               url=${URL}
+
 check the page title is "${TITLE}"
     Title Should Be     title=${TITLE}
 
@@ -38,3 +48,15 @@ check if send with succeed
     Wait Until Element Is Visible           ${SUCCESS_TEXT}
     ${txt_element} =                        Get Text            ${SUCCESS_TEXT}
     Should Contain                          ${txt_element}      Contato enviado com sucesso 😍
+
+#GHERKIN
+
+Given home page the Ascenderti
+    access the website
+
+When check the page title "${title}"
+    check the page title is "${title}"
+
+Then click menu "Quem Somos"
+    click menu 'Quem Somos'
+
