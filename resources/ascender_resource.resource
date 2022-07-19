@@ -60,3 +60,21 @@ When check the page title "${title}"
 Then click menu "Quem Somos"
     click menu 'Quem Somos'
 
+Then click menu 'O que fazemos'
+    click menu 'O que fazemos'
+
+Then click menu 'TRABALHE CONOSCO'
+    click menu 'TRABALHE CONOSCO'
+
+Then click menu 'Sabia Mais'
+    click menu 'Sabia Mais'
+
+And fill in the fields
+    [Arguments]         ${NAME}   ${EMAIL}  ${MOBILE}    ${MESSAGE}
+    fill in the fields  ${NAME}   ${EMAIL}  ${MOBILE}    ${MESSAGE}
+
+And click button submit
+    click button submit
+
+Then check if send with succeed
+    check if send with succeed
