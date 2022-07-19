@@ -21,23 +21,27 @@ Test case 02 - Click menu 'O que fazemos'
     [Documentation]     Test click for menu 'what we do'
     [Tags]              menus   o_que_fazemos
 
-    check the page title is "Ascender - Elevando o nível dos sistemas da sua empresa"
-    click menu 'O que fazemos'
+    Given home page the Ascenderti
+    When check the page title "Ascender - Elevando o nível dos sistemas da sua empresa"
+    Then click menu 'O que fazemos'
     
 
 Test case 03 - Click menu 'Trabalhe conosco'
     [Documentation]     Test click for menu 'work with us'
     [Tags]              menus   trabalhe_consoco
 
-    check the page title is "Ascender - Elevando o nível dos sistemas da sua empresa"
-    click menu 'TRABALHE CONOSCO'
+    Given home page the Ascenderti
+    When check the page title "Ascender - Elevando o nível dos sistemas da sua empresa"
+    Then click menu 'TRABALHE CONOSCO'
     
 
 Test case 04 - Click button 'Saiba Mais'
     [Documentation]     Test click for button 'Know more'
+    [Tags]              sabia_mais
 
-    check the page title is "Ascender - Elevando o nível dos sistemas da sua empresa"
-    click menu 'Sabia Mais'
+    Given home page the Ascenderti
+    When check the page title "Ascender - Elevando o nível dos sistemas da sua empresa"
+    Then click menu 'Sabia Mais'
     
 
 Test case 05 - Fill in the fields, click send and ckeck with succeed
@@ -46,10 +50,11 @@ Test case 05 - Fill in the fields, click send and ckeck with succeed
 
     ${NAME_FAKER}       FakerLibrary.Name
     ${EMAIL_FAKER}      FakerLibrary.Email
-    ${MOBILE_FAKER}    FakerLibrary.Phone Number
-    ${MESSAGE_FAKER}   FakerLibrary.Text
+    ${MOBILE_FAKER}     FakerLibrary.Phone Number
+    ${MESSAGE_FAKER}    FakerLibrary.Text
 
-    check the page title is "Ascender - Elevando o nível dos sistemas da sua empresa"
-    fill in the fields  ${NAME_FAKER}   ${EMAIL_FAKER}  ${MOBILE_FAKER}    ${MESSAGE_FAKER}
-    click button submit
-    check if send with succeed
+    Given home page the Ascenderti
+    When check the page title "Ascender - Elevando o nível dos sistemas da sua empresa"
+    And fill in the fields  ${NAME_FAKER}   ${EMAIL_FAKER}  ${MOBILE_FAKER}    ${MESSAGE_FAKER}
+    And click button submit
+    Then check if send with succeed
