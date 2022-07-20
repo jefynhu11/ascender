@@ -51,8 +51,14 @@ check if send with succeed
 
 #GHERKIN
 
-Given home page the Ascenderti
-    access the website
+I am on website ASCENDER
+    Go To               url=${URL}
+
+I click at "Quem Somos"
+    Click Element       ${QUEM_SOMOS}
+
+the page title should be "${TITLE}"
+    Title Should Be     title=${TITLE}
 
 When check the page title "${title}"
     check the page title is "${title}"
