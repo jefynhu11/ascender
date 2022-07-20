@@ -13,9 +13,9 @@ Test case 01 - Click menu 'Quem Somos'
     [Documentation]     Test click for menu 'who we are'
     [Tags]              menus   quem_somos
 
-    Given home page the Ascenderti
-    When check the page title "Ascender - Elevando o nível dos sistemas da sua empresa"
-    Then click menu "Quem Somos"
+    Given I am on website ASCENDER
+    When I click at "Quem Somos"
+    Then the page title should be "Ascender - Elevando o nível dos sistemas da sua empresa"
 
 Test case 02 - Click menu 'O que fazemos'
     [Documentation]     Test click for menu 'what we do'
